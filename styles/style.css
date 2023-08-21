@@ -1,0 +1,397 @@
+:root {
+  /*------------- Primary Color ----------------*/
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+
+  /*------------- Secondary Color----------------*/
+
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+  --dark-blue: hsla(240, 100%, 5%, 1);
+
+  /*------------------ Font ---------------------*/
+  --Font-Main: "Inter", sans-serif;
+}
+
+/*-------------------------------------------------
+                        Body 
+ -----------------------------------------------------*/
+body {
+  margin: 0;
+  font-family: var(--Font-Main);
+  background-color: var(--Off-white);
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  min-height: 100vh;
+}
+/*---------------------------------------------------
+                Page Container && blur bg
+---------------------------------------------------*/
+.page-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5vh 0;
+}
+.blur-background {
+  display: none;
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--dark-blue);
+  opacity: 0.5;
+}
+/*-------------------------------------------------
+                     Common classes 
+----------------------------------------------*/
+/* Heading (M) */
+.heading-m {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+}
+/* Heading (S) */
+.heading-s {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.5rem;
+}
+/* Heading (XS) */
+.heading-xs {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.5rem;
+}
+.news-paragraph,
+.aside-title,
+.aside-subtitle,
+.aside-paragraph,
+.article-number,
+.article-heading,
+.article-paragraph {
+  font-feature-settings: "clig" off, "liga" off;
+}
+/*-------------------------------------------------
+                       Header style
+---------------------------------------------------*/
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 30px 0;
+}
+
+.menu {
+  list-style-type: none;
+  display: none;
+  
+}
+
+.menu-item-link {
+  text-decoration: none;
+}
+
+.menu-logo {
+  width: 44.977px;
+}
+
+@media (max-width: 1024px) {
+  .item-container {
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--Off-white);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 144px 29px 0 24px;
+    width: 60%;
+
+  }
+}
+.menu-item {
+  color: var(--dark-blue);
+  font-family: var(--Font-Main);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+.menu-item:hover {
+  color: var(--Soft-red);
+}
+
+.menu-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.hamburger {
+  display: block;
+}
+.menu-button {
+  all: unset;
+  cursor: pointer;
+}
+
+.menu-button-icon {
+  width: 40px;
+  height: 17px;
+}
+.menu-close-icon {
+  position: absolute;
+  display: none;
+  width: 30.406px;
+  height: 30.406px;
+  top: 27px;
+  right: 20px;
+}
+
+/*-----------------------------------------------------
+                       Main style
+-------------------------------------------------------*/
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  gap: 64px;
+}
+/*-------------------------------------------------
+                    Main Section style
+---------------------------------------------------*/
+.news-section {
+  max-width: 730px;
+}
+
+.news-title {
+  color: var(--Very-dark-blue);
+  font-size: 2.66rem;
+  font-weight: 800;
+  line-height: 2.66rem;
+  padding: 24px 0;
+}
+
+.news-paragraph {
+  color: var(--Dark-grayish-blue);
+  padding-bottom: 24px;
+}
+
+.news-button {
+  all: unset;
+  background-color: var(--Soft-red);
+  color: var(--Off-white);
+  font-family: var(--Font-Main);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.29;
+  text-transform: uppercase;
+  padding: 12px 35px;
+  cursor: pointer;
+}
+
+.news-button:hover {
+  background-color: var(--dark-blue);
+}
+/*---------------------------------------------------
+                        Aside style
+-----------------------------------------------------*/
+
+.aside {
+  background-color: var(--Very-dark-blue);
+  padding: 24px 20px;
+  text-align: start;
+  max-width: 350px;
+}
+
+.aside-title {
+  color: var(--Soft-orange);
+}
+.aside-article:not(:last-child) {
+  padding: 30px 0;
+}
+.aside-article:last-child {
+  padding-top: 30px;
+}
+
+.aside-article-border {
+  border-top: 1px solid var(--Dark-grayish-blue);
+}
+
+.aside-subtitle {
+  color: var(--Off-white);
+  cursor: pointer;
+}
+.aside-subtitle:hover {
+  color: var(--Soft-orange);
+}
+.aside-paragraph {
+  color: var(--Grayish-blue);
+  padding-top: 8px;
+}
+/*---------------------------------------------------
+               Articles Section style
+-----------------------------------------------------*/
+.article-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+}
+
+.article {
+  display: flex;
+  gap: 20px;
+}
+
+.article-image {
+  width: 100%;
+  max-width: 130px;
+}
+
+.article-info {
+  display: flex;
+  flex-direction: column;
+}
+.article-number {
+  color: var(--Grayish-blue);
+}
+.article-heading {
+  color: var(--Very-dark-blue);
+  padding: 12px 0 8px 0;
+  cursor: pointer;
+}
+.article-heading:hover {
+  color: var(--Soft-red);
+}
+.article-paragraph {
+  color: var(--Dark-grayish-blue);
+}
+
+/*----------------------------------------------------------------------
+                      Media Query for 480px To 1024px
+--------------------------------------------------------------------*/
+
+/*-----------------------------------------------------
+                       Articles Section style
+-------------------------------------------------------*/
+
+.article-section {
+  margin: 0 auto 0 0;
+}
+
+/*----------------------------------------------------------------------
+                      Media Query for 1024px & +++ 
+--------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  /*---------------------------------------------------
+                Page Container
+---------------------------------------------------*/
+  .page-container {
+    padding: 5vh 0;
+  }
+
+  /*-------------------------------------------------
+                     Common classes 
+----------------------------------------------*/
+
+  .item {
+    flex: 1 350px;
+  }
+
+  /*-------------------------------------------------
+                       Header style
+---------------------------------------------------*/
+  .menu-logo {
+    width: 64.092px;
+    height: 39.9px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .item-container {
+    display: flex;
+  }
+
+  .menu-item {
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+  }
+
+  .menu-item:not(:nth-child(5)) {
+    margin: auto;
+    margin-right: 40px;
+  }
+  .menu-item:nth-child(5) {
+    margin: auto;
+  }
+  .menu-close-icon {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  /*-----------------------------------------------------
+                       Main style
+-------------------------------------------------------*/
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    flex-wrap: wrap;
+    text-align: start;
+    gap: 4.4vw;
+  }
+
+  /*-------------------------------------------------
+                    Main Section style
+---------------------------------------------------*/
+
+  .news-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .news-title {
+    max-width: 350px;
+    /* Heading (XL) */
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 3.5rem;
+  }
+  .news-paragraph {
+    padding: 24px 0;
+  }
+  /*---------------------------------------------------
+                        Aside style
+-----------------------------------------------------*/
+  .aside-title {
+    /* Heading (L) */
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+  /*---------------------------------------------------
+               Articles Section style
+-----------------------------------------------------*/
+
+  .article-section {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+  }
+}
