@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Link](https://www.frontendmentor.io/solutions/responsive-news-homepage-O505j06gng)
 - Live Site URL: [Link](https://my-homepage-news.netlify.app)
 
 ## My process
